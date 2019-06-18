@@ -62,29 +62,33 @@ R::trash($back);
         </header>
         <body>
 <div>
+
+  <!-- Поиск объявления у залогиненного пользователя -->
+
 <?php	
-$id = $_SESSION['logged_user']->id;
-$back = R::load('board', $id);
-$blank->back['blank'];
+$id = $_SESSION['logged_user']->id; // Присваиваем в переменную id залогиненного пользователя
+$back = R::load('board', $id); // Получаем из таблицы запись под ее номером 
+$blank = $_SESSION['logged_user']->blank; // Присваеваем в переменную числовое значение поля из таблицы 
+
 ?>			   
 				<div class="container">
         <div class="post-wrap wrapper-fullads">
         <div class="wrapper-item">
         <div class="ads__fullads">
+           
            <?php
            if($blank>0){
-            $row = R::load('board', $id);
-            echo "<img src='$row[img]'>"."<br>";
-            echo $row['name']."<br>";
-            echo  $row['disc']."<br>"?></div>
+            echo "<img src='$back[img]'>"."<br>";
+            echo $back['name']."<br>";
+            echo  $back['disc']."<br>"?></div>
             ?>
             <div class="ads__textarea">
               <?php
-                echo $row['discription']."<br>";
+                echo $back['discription']."<br>";
               ?>
                 <strong>
               <?php
-              echo $row['price']."<br>";
+              echo $back['price']."<br>";
               ?>
 
                 </strong>
@@ -101,7 +105,16 @@ $blank->back['blank'];
 </div>
 
                        
-              <footer>
+             
+	
+	
+	
+	
+	
+	
+	
+	
+	<footer>
                 <div class="container">
                         <div class="footer-col"><span>© 2019 Доска объявлений "Купи-продай" | Баринов Антон 15ИТ18</span></div>
                   </div>
@@ -109,3 +122,4 @@ $blank->back['blank'];
               </footer>
         </body>
 </html>
+
