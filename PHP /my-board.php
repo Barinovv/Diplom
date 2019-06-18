@@ -20,10 +20,7 @@ R::trash($back);
   <link rel="stylesheet" type="text/css" href="../CSS/rightcollon.css">
   <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
   <link rel="stylesheet" type="text/css" href="../CSS/bodyblocks.css">
-  <link rel="stylesheet" type="text/css" href="../CSS/item.css?1">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="../CSS/item.css?>
 </head>
 <header>
                <div class="wrapper-head">
