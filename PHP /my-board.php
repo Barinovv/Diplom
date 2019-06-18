@@ -1,8 +1,8 @@
 <?php
 require "../includs/db.php";
 if ( isset($data['do_delete'])){
-$id = $_SESSION['logged_user']->id;
-$back = R::load('board', $id);
+$back = R::find('board', "'blank'==?", array($id)); 
+
 R::trash($back);
 }
 ?>
@@ -20,7 +20,8 @@ R::trash($back);
   <link rel="stylesheet" type="text/css" href="../CSS/rightcollon.css">
   <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
   <link rel="stylesheet" type="text/css" href="../CSS/bodyblocks.css">
-  <link rel="stylesheet" type="text/css" href="../CSS/item.css?>
+  <link rel="stylesheet" type="text/css" href="../CSS/item.css">
+
 </head>
 <header>
                <div class="wrapper-head">
@@ -62,14 +63,14 @@ R::trash($back);
 
   <!-- Поиск объявления у залогиненного пользователя -->
 
-<?php	
+<?php 
 $id = $_SESSION['logged_user']->id; // Берем ID залогиненного пользователя
 // Поле blank хранит ID пользователя, который подал объявление
 $back = R::find('board', "'blank'==?", array($id)); // В таблице board ищем объявления пользователя
 $count = count($back); // Количество объявлений пользователя
 
-?>			   
-				<div class="container">
+?>         
+        <div class="container">
         <div class="post-wrap wrapper-fullads">
         <div class="wrapper-item">
         <div class="ads__fullads">
@@ -106,25 +107,11 @@ $count = count($back); // Количество объявлений пользо
 </div>
 
   
-                 
+                       
+             
 	
 	
 	
-	
-	
-	
-	
-	
-	
-              <footer>
-                <div class="container">
-                        <div class="footer-col"><span>© 2019 Доска объявлений "Купи-продай" | Баринов Антон 15ИТ18</span></div>
-                  </div>
-                </div>                
-              </footer>
-        </body>
-</html>
-
 	
 	
 	
@@ -132,7 +119,8 @@ $count = count($back); // Количество объявлений пользо
 	
 	
 	<footer>
-                <div class="container">
+             
+		      <div class="container">
                         <div class="footer-col"><span>© 2019 Доска объявлений "Купи-продай" | Баринов Антон 15ИТ18</span></div>
                   </div>
                 </div>                
