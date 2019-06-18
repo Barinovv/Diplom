@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background:#F5E2CD;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+.container{
+max-width: 960px;
+  display: flex;
+  margin: 0 auto;
+
+}
+.post-wrap {
+	display: grid;
+}
+
+.main{
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 253px;
+	grid-row-gap: 40px;
+}
+.post-item {
+	padding: 0px 15px 15px;	
+	cursor: pointer;
+	height: 100px;
+
+}
+.post-item * {
+	transition: .3s linear;
+	
+}
+
+
+
+.item-content {
+	background: rgb(243, 234, 180);
+    padding: 40px;
+}
+.item-icon {
+	margin-bottom: 20px;
+}
+
+.auto img{
+	width: 100px;
+	height: 70px;		
+}
+
+.house img{
+	width: 75px;
+	height: 65px;		
+}
+
+.electronics img{
+	width: 75px;
+	height: 65px;		
+}
+
+.goods img{
+	width: 80px;
+	height: 70px;		
+}
+
+.item-icon:before {
+	content: "";
+	font-family: FontAwesome;
+	color: rgb(0, 0, 0);
+	font-size: 50px;
+	line-height: 1;
+}
+
+.post-item:hover .item-icon,
+.post-item:hover .item-body h3,
+.post-item:hover .item-body p {
+	transform: translateY(-8px);
+}
+.item-body {
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+}
+.item-body h3 {
+	font-weight: 500;
+    margin-bottom: 15px;
+	transition-delay: .05s;
+}
+.item-body p {
+	transition-delay: .1s;
+}
+.item-footer {
+	padding-top: 15px;
+}
+.link {  
+	text-decoration: none;	
+    display: inline-block; 
+	overflow: hidden;	
+	position: relative;
+	padding-right: 30px;
+	font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black    ;
+}
+.link:before {    
+    content: "";
+    position: absolute;
+    top: 0;
+	left: 0;
+    width: 100%;
+	bottom: 0;
+    height: .125rem;
+	margin: auto;
+	background: rgb(5, 5, 5);
+    transform: scaleX(.2);
+    transform-origin: left center;
+    z-index: 0;
+	transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.link span {
+	display: inline-block;
+    position: relative;
+    transform: translateX(-200%);    
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.post-item:hover .link span {
+    transform: translateX(0%);
+}
+.post-item:hover .link:before {
+	transform-origin: right center;
+}

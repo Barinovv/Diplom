@@ -1,0 +1,71 @@
+.btn{
+    border: 0;
+    border-radius: 5px;
+    
+}
+.ads{
+    background: #fff;
+    display: grid;  
+    grid-template-columns: 47% 53%;  
+    grid-gap: 10px;
+    
+   
+}
+
+.ads__title{
+    display: grid;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.ads__newads{
+    grid-template-rows: 267px 50px auto ;
+
+}
+
+.wrapper-item{
+    display: grid;
+    grid-template-columns: 1fr;
+    width:480px;
+    padding-right: 5px;
+    grid-row-gap: 15px;
+}
+
+.card{
+    grid-template-columns: 1fr;
+    height: 100px;
+	
+}
+
+.ads__text{
+    font-family: 'Montserrat Alternates', sans-serif;
+padding: 5px;
+}
+
+.ads__textarea{
+width: 100%;
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 3;
+grid-row-end: 2;
+
+}
+
+.wrapper-right{
+    padding: 10px;
+    height: 126px;
+}
+
+.ads__fullads{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: #fff;
+    height: 315px;
+    padding: 10px;
+}
+
+.ads__head{
+    padding: 10px;
+    height: 126px;
+}
