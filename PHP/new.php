@@ -14,14 +14,14 @@ if ( isset($data['do_new']) )
         $message->discription = $data['discription'];
         $message->price = $data['price'];
         $message->category = $data['category'];
-
+        $id = $_SESSION['logged_user']->id;
+        $message->blank = $id;
         R::store($board);
         $_SESSION['logged_board'] = $board;
         echo 'Сообщение отправлено';
 
-        $id = $_SESSION['logged_user']->id;
-        $user = R::load('users', $id);
-                $user->blank = '1';
+       
+ 
 }
 ?>
 <html lang="en">
